@@ -2,6 +2,8 @@
 
 **Sudo Configurator** 是一個 macOS 專用的工具，用於快速為指定使用者設定 `sudo` 權限，並簡化相關操作。
 
+[Release v1.0](https://github.com/ap311036/Sudo-Configurator/releases/download/v1.0/Sudo.Configurator.app.zip)
+
 ---
 
 ## 功能介紹
@@ -34,6 +36,23 @@
    - 成功配置後，可選擇開啟 `/etc/sudoers.d` 資料夾以檢查新增的設定文件。
 
 ---
+
+## 開啟應用前的重要步驟
+
+macOS 系統可能會將下載的應用標記為「受限」文件，導致無法執行。請依照以下步驟解除限制並正確啟動應用：
+
+1. **移除 quarantine 標記**  
+   在終端機中執行以下命令：  
+   ```bash
+   xattr -d com.apple.quarantine /path/to/SudoConfigurator.app
+   
+2. **設定執行權限**
+   確保應用的主執行文件具備執行權限：
+   ```bash
+    chmod +x /path/to/SudoConfigurator.app/Contents/MacOS/*
+
+3. **啟動應用**
+點擊 SudoConfigurator.app 即可正常啟動。
 
 ## 注意事項
 
